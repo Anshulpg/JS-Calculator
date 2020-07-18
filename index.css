@@ -5,12 +5,13 @@
 }
 
 body {
-    background: url('./calc.jpg');
+    background: url("./calc.jpg");
+    background-attachment: fixed;
     /* background-position: center;   */
     background-repeat: no-repeat;
     background-color: red;
     background-size: 100vw 100vh;
-    padding: 100px;
+    /* padding: 100px; */
 }
 
 .container {
@@ -27,12 +28,9 @@ body {
 }
 
 .answers {
-    background-color: red;
-    width: 98%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px 10px 100px 0;
 }
 
 .container textarea {
@@ -60,7 +58,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.btn button:hover {
+.btn button:active {
     background-color: red;
     color: white;
     border: 2px solid red;
@@ -87,7 +85,7 @@ body {
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
-.submit button:hover {
+.submit button:active {
     background-color: rgb(0, 0, 110);
     color: white;
     border: none;
@@ -107,4 +105,15 @@ button {
 
 button::-moz-focus-inner {
     border: 0;
+}
+
+@media screen and (max-width:420px) {
+    .container {
+        margin: 80px 100px 223px 47px;
+        margin-bottom: 70px;
+    }
+    body {
+        background-size: cover;
+    }
+
 }

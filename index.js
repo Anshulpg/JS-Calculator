@@ -43,6 +43,7 @@ for (const items of buttons) {
                 ansvalue = "";
             }
 
+
         } else {
             if (ansvalue == "" && c != 0) {
                 answer.value = "";
