@@ -1,3 +1,7 @@
+let loader = document.querySelector(".loader");
+window.addEventListener("load", () => {
+    loader.classList.add("disappear");
+})
 
 let answer = document.getElementById("demo");
 let ansvalue = '';
