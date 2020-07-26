@@ -2,17 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
-    background: url("./calc.jpg");
-    background-attachment: fixed;
-    /* background-position: center;   */
-    background-repeat: no-repeat;
-    background-color: red;
-    /* display: none; */
-    background-size: 100vw 100vh;
-    /* padding: 100px; */
+    background-color: gray;
 }
 
 .loader {
@@ -39,109 +33,106 @@ body {
 }
 
 .container {
+    z-index: -1000000;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -40%);
-    z-index: -10000;
-}
-
-/* #container {
-    display: none;
-} */
-
-.answers {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container textarea {
-    display: block;
-    background: red;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100px;
-    outline: red;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container>h1 {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    margin: 30px;
+    margin-bottom: 40px;
+    font-size: 53px;
+    color: white;
+}
+
+textarea {
     resize: none;
-    overflow-y: auto;
+    width: 440px;
+    height: 100px;
+    border: none;
+    color: rgb(43, 35, 35);
     font-size: 40px;
-    color: white;
-}
-
-.btn button {
-    width: 100px;
-    height: 94px;
-    margin: 4px;
-    font-size: 30px;
-    background-color: white;
-    border-radius: 100%;
-    outline: none;
-    border: 2px solid white;
-    transition: all 0.2s ease-out;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.btn button:active {
-    background-color: red;
-    color: white;
-    border: 2px solid red;
+    background-color: rgb(192, 192, 192);
+    padding: 10px;
 }
 
 .btn {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn button {
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    padding: 10px;
-    /* margin: -0.2px; */
-}
-
-.submit button {
-    display: block;
-    width: 455px;
-    padding: 10px;
-    font-size: 40px;
-    margin: 0px;
-    /* background-color: white; */
-    border: 1px solid red;
-    transition: all 0.2s ease-in;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-}
-
-.submit button:active {
-    background-color: rgb(0, 0, 110);
-    color: white;
-    border: none;
-}
-
-.submit button :active {
-    outline: none;
-}
-
-.submit button:visited {
-    outline: none;
+    text-align: center;
+    font-size: 34px;
+    border-radius: 100%;
+    width: 100px;
+    margin: 7px;
+    padding: 30px;
 }
 
 button {
     outline: none;
+    border: none;
 }
 
-button::-moz-focus-inner {
-    border: 0;
+.submit button {
+    margin: auto;
+    text-align: center;
+    width: 480px;
+    padding: 5px 0;
+    margin-top: 20px;
+    font-size: 45px;
+    background-color: blue;
+    opacity: 0.4;
+    color: white;
 }
 
-@media screen and (max-width:420px) {
-    .container {
-        margin: 80px 100px 223px 47px;
-        margin-bottom: 70px;
+.btn button:active {
+    background-color: rgb(197, 217, 235);
+}
+
+.calc {
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    background-color: rgb(192, 192, 192);
+}
+
+/* For Responsive Webpage */
+
+@media screen and (min-width:450px) {
+    .submit button {
+        display: block;
+        width: 480px;
+        padding: 10px 0;
     }
-    body {
-        background-size: cover;
+}
+
+@media screen and (max-width:450px) {
+    .btn button {
+        margin: 6px;
+        width: 60px;
+        display: flex;
+        padding: 42px;
+        height: 60px;
+    }
+    .container {
+        margin: auto;
+        width: 500px;
+    }
+    textarea {
+        width: 380px;
     }
 }
