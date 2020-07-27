@@ -33,7 +33,6 @@ body {
 }
 
 .container {
-    /* margin: 100px; */
     z-index: -1000000;
     display: flex;
     top: 0;
@@ -137,7 +136,7 @@ h2 {
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:480px) {
     .btn button {
         margin: 6px;
         width: 60px;
@@ -147,16 +146,9 @@ h2 {
     }
     .container {
         margin: auto;
-        min-width: 680px;
+        width: 600px;
     }
     textarea {
         width: 410px;
-    }
-}
-
-@media (min-width:50px) and (max-width:300px) {
-    .btn button {
-        padding-top: 40px;
-        padding-bottom: 42px;
     }
 }
